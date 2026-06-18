@@ -81,13 +81,13 @@ const Footer = () => {
         <div className="flex justify-center gap-4 mt-10">
           <SocialIcon platform="instagram" href="https://instagram.com/sunshinecoffee11" />
           <SocialIcon platform="facebook" href="https://facebook.com/sunshine.coffee" />
-          <SocialIcon platform="tiktok" href="https://tiktok.com/@sunshine.coffee" />
+          <SocialIcon platform="tiktok" href="https://www.tiktok.com/@sunshine.coffe5" />
         </div>
 
         {/* Divider */}
         <div className="border-t border-light-gold/20 mt-8 pt-6">
           <p className="text-center text-xs text-white/50 tracking-wide">
-            © 2024 SUNSHINE COFFEE. TODOS LOS DERECHOS RESERVADOS.{" "}
+            © 2026 SUNSHINE COFFEE. TODOS LOS DERECHOS RESERVADOS.{" "}
             <Heart size={12} className="inline text-warm-gold ml-1" />
           </p>
         </div>
