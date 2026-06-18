@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&family=Dancing+Script:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 50% 95%;
+    --foreground: 20 40% 15%;
+    --card: 43 50% 95%;
+    --card-foreground: 20 40% 15%;
+    --popover: 43 50% 95%;
+    --popover-foreground: 20 40% 15%;
+    --primary: 20 40% 17%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 37 45% 90%;
+    --secondary-foreground: 20 40% 15%;
+    --muted: 37 30% 88%;
+    --muted-foreground: 20 30% 35%;
+    --accent: 28 45% 60%;
+    --accent-foreground: 20 40% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 37 30% 85%;
+    --input: 37 30% 85%;
+    --ring: 28 45% 60%;
+    --radius: 0.625rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-dark-brown font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-[1200px] mx-auto px-6 md:px-8;
+  }
+
+  .caption-label {
+    @apply text-xs font-medium uppercase tracking-[0.08em];
+  }
+}
