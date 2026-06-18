@@ -80,7 +80,7 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex justify-center gap-4 mt-10">
           <SocialIcon platform="instagram" href="https://instagram.com/sunshinecoffee11" />
-          <SocialIcon platform="facebook" href="https://facebook.com/sunshine.coffee" />
+          <SocialIcon platform="facebook" href="https://facebook.com/" />
           <SocialIcon platform="tiktok" href="https://www.tiktok.com/@sunshine.coffe5" />
         </div>
 

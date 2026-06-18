@@ -85,8 +85,8 @@ const CommunitySection = () => {
             {/* Social Icons */}
             <div className="reveal-item flex gap-3 mb-4">
               <SocialIcon platform="instagram" href="https://instagram.com/sunshinecoffee11" />
-              <SocialIcon platform="facebook" href="https://facebook.com/sunshine.coffee" />
-              <SocialIcon platform="tiktok" href="https://tiktok.com/@sunshine.coffee" />
+              <SocialIcon platform="facebook" href="https://facebook.com/" />
+              <SocialIcon platform="tiktok" href="https://tiktok.com/@sunshine.coffe5" />
             </div>
 
             <p className="reveal-item text-sm text-medium-brown mb-6">
