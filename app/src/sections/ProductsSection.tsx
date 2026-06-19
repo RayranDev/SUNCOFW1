@@ -92,25 +92,13 @@ const ProductsSection = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {products.map((product, index) => {
-            const CardWrapper = product.externalLink ? "a" : "div";
-            const cardProps = product.externalLink
-              ? {
-                  href: product.externalLink,
-                  target: "_blank" as const,
-                  rel: "noopener noreferrer",
-                }
-              : {};
-
             return (
-              <CardWrapper
+              <div
                 key={product.id}
-                {...cardProps}
-                ref={(el: HTMLDivElement | HTMLAnchorElement | null) => {
-                  if (el) cardsRef.current[index] = el as HTMLDivElement;
+                ref={(el: HTMLDivElement | null) => {
+                  if (el) cardsRef.current[index] = el;
                 }}
-                className={`relative flex flex-col items-center text-center group ${
-                  product.externalLink ? "cursor-pointer" : ""
-                }`}
+                className={`relative flex flex-col items-center text-center group`}
               >
                 {/* Featured Badge */}
                 {product.featured && (
@@ -121,20 +109,31 @@ const ProductsSection = () => {
 
                 {/* External Link Badge */}
                 {product.externalLink && (
-                  <div className="absolute -top-3 right-4 z-10 bg-sage-green text-white text-xs font-medium px-3 py-1 rounded-sm rotate-3 shadow-sm flex items-center gap-1">
+                  <a href={product.externalLink} target="_blank" rel="noopener noreferrer" className="absolute -top-3 right-4 z-20 bg-sage-green text-white text-xs font-medium px-3 py-1 rounded-sm rotate-3 shadow-sm flex items-center gap-1 hover:scale-105 transition-transform cursor-pointer">
                     <ExternalLink size={12} />
                     VER MÁS
-                  </div>
+                  </a>
                 )}
 
                 {/* Product Image */}
                 <div className="relative w-full max-w-[260px] aspect-square mb-6 transition-transform duration-300 group-hover:scale-[1.02] overflow-hidden rounded-lg">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
+                  {product.externalLink ? (
+                    <a href={product.externalLink} target="_blank" rel="noopener noreferrer" className="block w-full h-full cursor-pointer">
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
 
                 {/* Product Info */}
@@ -148,7 +147,7 @@ const ProductsSection = () => {
                     {product.description}
                   </p>
                 </div>
-              </CardWrapper>
+              </div>
             );
           })}
         </div>
