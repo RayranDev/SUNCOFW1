@@ -34,7 +34,7 @@ const products = [
     description: "Café de especialidad, en grano o molido variedad Castilla.",
     image: "/images/cafe-dinastia.jpg",
     featured: false,
-    externalLink: "#", // URL to be specified later
+    externalLink: "https://acw1.onrender.com",
   },
 ];
 
